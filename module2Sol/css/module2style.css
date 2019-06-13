@@ -1,0 +1,108 @@
+/*1. include a css file
+	2. Breakpoints
+		->Desktop >=992px
+		  Each section should take up equal amount of space
+
+
+		 ->Tablet 768px and 991px
+		  First two sections should be equal
+		  Third row takes up entire space
+
+		  ->Mobile layout <=767px
+		  Each section should take up entire row
+
+	3. Each section should have a title region positioned to the top right
+	4. Take care of spacing between the sections
+	5. Borders and Colors 
+		-> Each section should have same background colors
+		-> Each section header to have different backgrround color
+	6. Spacing */
+
+	*{
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: 'Noto Serif', serif;
+		
+	}
+
+	h1{
+		text-align: center;
+		color:black;
+		font-weight: bold;
+	}
+
+	section{
+		border:1px solid black;
+		background-color: #9e9994;
+		margin:10px;
+		
+	}
+
+	section > h2{
+		float:right;
+		border-bottom:1px solid black;
+		border-left: 1px solid black;
+		margin:0;
+		width: 230px;
+		text-align: center;
+		font-weight: bold;
+		padding-top: 10px;
+		height: 45px;
+
+	}
+
+	section.chicken>h2{
+		background-color: #76b8db;
+	}
+
+	section.beef>h2{
+		background-color: #d32344;
+		color: white;
+	}
+
+	section.shushi>h2{
+		 background-color: #7ccc7f;
+	}
+
+	section>p {
+    padding: 40px 15px 15px 15px;
+}
+
+
+
+/*Desktop View*/
+
+@media(min-width: 992px){
+	.col-lg-4{
+		float:left;
+		width: 33.33%;
+	}
+}
+
+/*Tab View*/
+@media (min-width: 768px) and (max-width: 991px){
+	.col-md-6, .col-md-12 {
+		float:left;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+	
+@media (max-width: 767px){
+	.col-sm-12{
+		float: left;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
